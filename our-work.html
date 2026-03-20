@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ItsHimalayas — Our ground-level conservation work in Uttarakhand and Himachal Pradesh. Plantation drives, trail cleanups, wildlife protection and Pahadi community support." />
+  <title>Our Work | ItsHimalayas</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0f1e'/%3E%3Cpath d='M16 10 L18 16 L22 12 L26 22' fill='none' stroke='%23c9a84c' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M14 14 L16 10 L18 13' fill='%23ffffff' opacity='0.9'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+  .page-hero {
+    min-height: 52vh;
+    background: var(--navy);
+    position: relative;
+    display: flex; align-items: flex-end;
+    padding-bottom: 72px;
+    overflow: hidden;
+  }
+  .page-hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&q=80') center/cover;
+    opacity: 0.18;
+  }
+  .page-hero-content { position: relative; z-index: 2; }
+  .page-hero h1 { color: var(--white); margin-bottom: 16px; }
+  .page-hero p { color: rgba(255,255,255,0.55); max-width: 560px; font-size: 1rem; }
+
+  /* Pillar hero cards */
+  .pillars-hero { padding: 96px 0; background: var(--off-white); }
+  .pillars-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-top: 56px;
+  }
+  .pillar-big {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .pillar-big-img { width:100%; height:240px; object-fit:cover; }
+  .pillar-big-body { padding:36px; }
+  .pillar-big-body h3 { font-family:var(--font-display); font-size:1.65rem; color:var(--navy); margin-bottom:12px; }
+  .pillar-big-body p { font-size:0.92rem; color:#5a6272; line-height:1.85; }
+  .pillar-big-tag {
+    display:inline-block; margin-top:20px;
+    font-size:0.7rem; font-weight:700; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--gold); font-family:var(--font-body);
+  }
+
+  /* Timeline */
+  .timeline-section { background:#fff; padding:96px 0; }
+  .timeline { position:relative; max-width:780px; margin:64px auto 0; }
+  .timeline::before {
+    content:''; position:absolute;
+    left:28px; top:0; bottom:0; width:2px;
+    background:linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .timeline-item { display:flex; gap:32px; margin-bottom:52px; }
+  .timeline-dot {
+    flex-shrink:0;
+    width:56px; height:56px;
+    background:var(--navy); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.4rem; z-index:2; position:relative;
+  }
+  .timeline-content { padding-top:10px; }
+  .timeline-year {
+    font-size:0.7rem; font-weight:700; letter-spacing:0.16em;
+    text-transform:uppercase; color:var(--gold); margin-bottom:8px;
+    font-family:var(--font-body);
+  }
+  .timeline-content h4 { font-family:var(--font-display); font-size:1.35rem; color:var(--navy); margin-bottom:8px; }
+  .timeline-content p { font-size:0.9rem; color:#6b7280; line-height:1.8; }
+
+  /* How to join */
+  .join-work-section { background:var(--navy); padding:96px 0; }
+  .join-work-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:56px; }
+  .join-step {
+    text-align:center; padding:40px 28px;
+    border:1px solid rgba(201,168,76,0.15); border-radius:var(--radius-lg);
+  }
+  .join-step-num {
+    font-family:var(--font-display); font-size:3rem; font-weight:300;
+    color:var(--gold); opacity:0.6; line-height:1; margin-bottom:20px;
+  }
+  .join-step h4 { font-family:var(--font-display); color:var(--white); margin-bottom:12px; }
+  .join-step p { color:rgba(255,255,255,0.45); font-size:0.88rem; line-height:1.75; }
+
+  @media(max-width:768px){
+    .pillars-hero-grid{grid-template-columns:1fr;}
+    .join-work-grid{grid-template-columns:1fr;}
+  }
+  </style>
+</head>
+<body>
+<div id="page-transition"></div>
+<div class="nav-overlay"></div>
+
+<nav id="navbar" role="navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-main">Its<span>Himalayas</span></span>
+        <span class="nav-logo-sub">Born in the Mountains. Working for Them.</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-work.html" class="active">Our Work</a></li>
+        <li><a href="adi-kailash-om-parvat.html">Adi Kailash & Om Parvat</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Stories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Join a Drive</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-content">
+    <span class="section-label white" style="display:block;margin-bottom:16px;">Ground Level Work</span>
+    <h1>What We Do<br>for the Himalayas</h1>
+    <p>No grants, no headlines — just consistent, hands-on work to protect the mountains, rivers, forests, and communities of the Himalayan region.</p>
+  </div>
+</section>
+
+<section class="pillars-hero">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Four Pillars of Our Work</span>
+      <h2 class="section-title">How We Show Up for the Mountains</h2>
+      <p class="section-subtitle" style="margin:0 auto;">From seedling to summit, our work spans every layer of the Himalayan ecosystem.</p>
+    </div>
+    <div class="pillars-hero-grid">
+      <div class="pillar-big reveal">
+        <img class="pillar-big-img" src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Plantation drive in Himalayas" loading="lazy"/>
+        <div class="pillar-big-body">
+          <h3>🌱 Plantation & Reforestation</h3>
+          <p>We organise large-scale plantation drives every season in collaboration with local panchayats and forest departments. Native species — Oak, Rhododendron, Deodar, Banj — are planted in areas affected by deforestation, landslides, and forest fires. Each drive involves the local community not as workers-for-hire but as decision-makers and lifelong guardians of what grows.</p>
+          <p style="margin-top:12px;">Our goal is not just to plant trees but to restore ecological corridors and replenish the green cover that regulates water springs, prevents soil erosion, and sustains the mountain climate.</p>
+          <span class="pillar-big-tag">Uttarakhand & Himachal Pradesh</span>
+        </div>
+      </div>
+      <div class="pillar-big reveal reveal-delay-1">
+        <img class="pillar-big-img" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80" alt="River cleanup Himalayan trail" loading="lazy"/>
+        <div class="pillar-big-body">
+          <h3>🏞️ River & Trail Cleanups</h3>
+          <p>Sacred rivers carry more than water — they carry the identity of these mountains. Trekking routes and pilgrimage paths, visited by millions each year, accumulate waste that slowly destroys the ecosystems around them. Our seasonal cleanup drives cover major trails before and after peak season.</p>
+          <p style="margin-top:12px;">We work with porters, guides, and local shopkeepers to build long-term waste management habits, not just one-day photo events. The metric we care about is not how much we collected, but how much less there is next year.</p>
+          <span class="pillar-big-tag">Pre & Post Season Drives</span>
+        </div>
+      </div>
+      <div class="pillar-big reveal">
+        <img class="pillar-big-img" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Pahadi community support Himalayas" loading="lazy"/>
+        <div class="pillar-big-body">
+          <h3>🏘️ Pahadi Community Support</h3>
+          <p>Conservation without the community is just management. The people of Uttarakhand and Himachal Pradesh — shepherds, farmers, artisans, teachers — are the original guardians of these ecosystems. When they thrive, the mountains thrive.</p>
+          <p style="margin-top:12px;">We support traditional livelihoods, facilitate market access for local produce and crafts, run awareness workshops in mountain schools, and ensure that any conservation effort we undertake puts local people at its centre.</p>
+          <span class="pillar-big-tag">Year Round · Multiple Districts</span>
+        </div>
+      </div>
+      <div class="pillar-big reveal reveal-delay-1">
+        <img class="pillar-big-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80" alt="Wildlife and ecosystem Himalayas" loading="lazy"/>
+        <div class="pillar-big-body">
+          <h3>🐆 Wildlife & Ecosystem Protection</h3>
+          <p>The Himalayas are home to snow leopards, Himalayan brown bears, musk deer, and thousands of plant species found nowhere else. The pressures of tourism, infrastructure, and climate change are compressing habitats at an alarming rate.</p>
+          <p style="margin-top:12px;">We document wildlife corridors, report illegal activity to forest departments, campaign against unregulated tourism in sensitive zones, and work with researchers to raise awareness about species under threat. The mountains don't have a voice — we try to be one.</p>
+          <span class="pillar-big-tag">Monitoring & Advocacy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE OF CAMPAIGNS -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Our Journey</span>
+      <h2 class="section-title">Campaigns & Milestones</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Six years of consistent, ground-level work across the Himalayan region.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🌱</div>
+        <div class="timeline-content">
+          <div class="timeline-year">2024</div>
+          <h4>Pithoragarh Reforestation Drive — 800+ Saplings</h4>
+          <p>Our biggest plantation drive yet. 800+ native saplings planted across degraded ridgelines above Dharchula in collaboration with the local panchayat and 60 volunteers.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🏞️</div>
+        <div class="timeline-content">
+          <div class="timeline-year">2024</div>
+          <h4>Adi Kailash Route Post-Season Cleanup — 400 kg Waste Removed</h4>
+          <p>After the 2024 yatra season, our team spent 5 days on the Adi Kailash route collecting and properly disposing of 400+ kg of waste left by pilgrims and trekkers.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🏘️</div>
+        <div class="timeline-content">
+          <div class="timeline-year">2023</div>
+          <h4>Darma Valley Women's Collective Launch</h4>
+          <p>Partnered with 22 women artisans in Darma Valley to create market access for traditional Bhotiya weavings, supporting livelihoods and keeping cultural crafts alive.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🐆</div>
+        <div class="timeline-content">
+          <div class="timeline-year">2023</div>
+          <h4>Snow Leopard Corridor Documentation</h4>
+          <p>Collaborated with wildlife researchers to document and map potential snow leopard corridors in the Pithoragarh region threatened by road construction.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🌊</div>
+        <div class="timeline-content">
+          <div class="timeline-year">2022</div>
+          <h4>Kali River Bank Cleanup — 3 Districts</h4>
+          <p>A three-day cleanup campaign along the Kali river banks across Pithoragarh, Champawat and Almora districts. 200+ volunteers, 280 kg of waste collected.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🌿</div>
+        <div class="timeline-content">
+          <div class="timeline-year">2018–2021</div>
+          <h4>Foundation Years — Trails, Trees, Community</h4>
+          <p>The early years that built the foundation — regular trail cleanups, annual plantation drives, and building relationships with mountain communities that last to this day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN / VOLUNTEER -->
+<section class="join-work-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label white">Volunteer With Us</span>
+      <h2 style="color:var(--white);margin-bottom:16px;">Three Ways to Join the Work</h2>
+      <p style="color:rgba(255,255,255,0.5);max-width:520px;margin:0 auto;font-size:0.95rem;">Anyone who cares about the Himalayas has a place in what we do.</p>
+    </div>
+    <div class="join-work-grid">
+      <div class="join-step reveal">
+        <div class="join-step-num">01</div>
+        <h4>Join a Campaign</h4>
+        <p>Register for an upcoming plantation drive or cleanup. We organise events across Uttarakhand and Himachal Pradesh throughout the year — all skill levels welcome.</p>
+      </div>
+      <div class="join-step reveal reveal-delay-1">
+        <div class="join-step-num">02</div>
+        <h4>Travel With Purpose</h4>
+        <p>Book a responsible Himalayan journey with us. Your travel fees directly support our conservation and community work — and you leave knowing you gave back.</p>
+      </div>
+      <div class="join-step reveal reveal-delay-2">
+        <div class="join-step-num">03</div>
+        <h4>Spread the Word</h4>
+        <p>Share our campaigns, follow our work on Instagram, tell your friends about what's happening in the mountains. Awareness is action too.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="contact.html" class="btn btn-primary">Get in Touch to Volunteer</a>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-main">Its<span>Himalayas</span></span>
+          <span class="nav-logo-sub">Born in the Mountains. Working for Them.</span>
+        </a>
+        <p class="footer-desc">Self-driven workers for the Himalayan region — planting, cleaning, conserving, and sharing the sacred beauty of these mountains.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Our Work</h5>
+        <ul class="footer-links">
+          <li><a href="our-work.html">Plantation Drives</a></li>
+          <li><a href="our-work.html">Trail Cleanups</a></li>
+          <li><a href="our-work.html">Community Support</a></li>
+          <li><a href="our-work.html">Wildlife Protection</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Travel</h5>
+        <ul class="footer-links">
+          <li><a href="adi-kailash-om-parvat.html">Adi Kailash & Om Parvat</a></li>
+          <li><a href="contact.html">Custom Yatra</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get In Touch</h5>
+        <div class="footer-contact-item"><span>📍</span><span>Dharchula, Pithoragarh<br>Uttarakhand – 262552</span></div>
+        <div class="footer-contact-item"><span>📞</span><a href="tel:+919456535685">+91 94565 35685</a></div>
+        <div class="footer-contact-item"><span>✉️</span><a href="mailto:itshimalayasofficial@gmail.com">itshimalayasofficial@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 ItsHimalayas. All rights reserved. Made with ❤️ for the mountains.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919456535685" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span class="wa-float-text">Chat on WhatsApp</span>
+</a>
+<script src="js/script.js" defer></script>
+</body>
+</html>
