@@ -72,9 +72,11 @@ p{font-weight:300;color:var(--text-mid);line-height:1.75}
 #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:background var(--transition),box-shadow var(--transition),padding var(--transition);transform:translateZ(0)}
 #navbar.scrolled{background:rgba(10,15,30,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(0,0,0,0.35);padding:13px 0}
 
+
+
 .nav-container{width:100%;max-width:1280px;margin:0 auto;padding:0 28px}
 
-.nav-inner{display:flex;align-items:center;gap:20px}
+.nav-inner{display:flex;align-items:center;gap:20px;justify-content:space-between}
 
 .nav-logo{display:flex;flex-direction:column;line-height:1;flex-shrink:0;text-decoration:none}
 .nav-logo-main{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);letter-spacing:-0.01em;white-space:nowrap}
