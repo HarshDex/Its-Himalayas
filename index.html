@@ -63,7 +63,8 @@
       </a>
       <ul class="nav-links" role="list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="adi-kailash-om-parvat.html">Adi Kailash & Om Parvat</a></li>
+        <li><a href="adi-kailash-om-parvat.html">Adi Kailash</a></li>
+        <li><a href="adi-kailash-om-parvat.html">Om Parvat</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
@@ -290,6 +291,190 @@
     </div>
   </div>
 </section>
+
+<!-- PHILOSOPHY / MOTTO SECTION -->
+<section class="motto-section" aria-label="Our Philosophy">
+  <div class="motto-bg-img"></div>
+  <div class="motto-overlay"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="motto-inner reveal">
+      <div class="motto-eyebrow">
+        <span class="motto-line"></span>
+        <span class="motto-eyebrow-text">Our Philosophy</span>
+        <span class="motto-line"></span>
+      </div>
+      <h2 class="motto-heading">Tourism &amp; Nature,<br><em>Growing Together</em></h2>
+      <p class="motto-body">We believe that tourism and nature must grow together in harmony. By promoting responsible and mindful travel, we support local communities while actively conserving the natural beauty of the Himalayas. Our journeys encourage eco-friendly practices, minimal plastic usage, and conscious waste management — ensuring that tourism leaves a positive impact rather than a footprint.</p>
+      <p class="motto-body">Through awareness, respect for the environment and active participation in conservation efforts, we aim to protect these pristine landscapes while allowing travellers to experience their true essence.</p>
+      <div class="motto-pillars">
+        <div class="motto-pillar">
+          <div class="motto-pillar-icon">🌿</div>
+          <div class="motto-pillar-label">Eco-Friendly Travel</div>
+        </div>
+        <div class="motto-pillar">
+          <div class="motto-pillar-icon">🏘️</div>
+          <div class="motto-pillar-label">Local Communities</div>
+        </div>
+        <div class="motto-pillar">
+          <div class="motto-pillar-icon">♻️</div>
+          <div class="motto-pillar-label">Zero Waste Camps</div>
+        </div>
+        <div class="motto-pillar">
+          <div class="motto-pillar-icon">🏔️</div>
+          <div class="motto-pillar-label">Conservation First</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* =========================================
+   MOTTO / PHILOSOPHY SECTION
+   ========================================= */
+.motto-section {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.motto-bg-img {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80&fm=webp') center/cover no-repeat;
+  transform: translateZ(0);
+}
+
+.motto-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10,15,30,0.97) 0%,
+    rgba(10,15,30,0.88) 50%,
+    rgba(10,15,30,0.94) 100%
+  );
+}
+
+.motto-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Eyebrow with lines */
+.motto-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.motto-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.motto-eyebrow .motto-line:last-child {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.motto-eyebrow-text {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: var(--font-body);
+}
+
+/* Heading */
+.motto-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 36px;
+  letter-spacing: -0.01em;
+}
+.motto-heading em {
+  font-style: italic;
+  color: var(--gold-light);
+  font-weight: 400;
+}
+
+/* Body paragraphs */
+.motto-body {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.85;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  font-weight: 300;
+}
+
+/* Pillars row */
+.motto-pillars {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 56px;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+}
+
+.motto-pillar {
+  flex: 1;
+  padding: 28px 16px;
+  border-right: 1px solid rgba(201,168,76,0.14);
+  transition: background 0.25s;
+  cursor: default;
+}
+.motto-pillar:last-child { border-right: none; }
+.motto-pillar:hover { background: rgba(201,168,76,0.06); }
+
+.motto-pillar-icon {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+}
+.motto-pillar-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .motto-section { padding: 80px 0; }
+  .motto-heading { font-size: 2rem; }
+  .motto-body { font-size: 0.92rem; }
+  .motto-pillars {
+    flex-wrap: wrap;
+    border-radius: 12px;
+  }
+  .motto-pillar {
+    flex: 0 0 50%;
+    border-right: 1px solid rgba(201,168,76,0.14);
+    border-bottom: 1px solid rgba(201,168,76,0.14);
+  }
+  .motto-pillar:nth-child(2) { border-right: none; }
+  .motto-pillar:nth-child(3) { border-bottom: none; }
+  .motto-pillar:nth-child(4) { border-right: none; border-bottom: none; }
+}
+
+@media (max-width: 400px) {
+  .motto-pillars { flex-direction: column; }
+  .motto-pillar { flex: 1; border-right: none; border-bottom: 1px solid rgba(201,168,76,0.14); }
+  .motto-pillar:last-child { border-bottom: none; }
+}
+</style>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials-section section-pad" id="testimonials" aria-labelledby="test-title">
