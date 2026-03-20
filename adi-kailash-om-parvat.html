@@ -67,9 +67,144 @@
       margin-bottom: 28px;
     }
 
-    @media (max-width: 580px) {
-      .itin-tabs { width: 100%; flex-direction: column; }
-      .itin-tab-btn { text-align: center; }
+    /* =============================================
+       RESPONSIVENESS — Page-level overrides only
+       (no changes to style.css)
+       ============================================= */
+
+    /* Overview grid: stack on tablet/mobile */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .booking-sidebar {
+        position: static !important;
+        top: auto !important;
+      }
+    }
+
+    /* Stats row: wrap nicely on mobile */
+    .overview-stats-row {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .overview-stat { text-align: center; }
+
+    @media (max-width: 480px) {
+      .overview-stats-row { gap: 20px; }
+      .overview-stat .stat-num { font-size: 1.8rem !important; }
+    }
+
+    /* Itinerary tabs: stack on mobile */
+    @media (max-width: 640px) {
+      .itin-tabs {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 12px;
+      }
+      .itin-tab-btn {
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 0.78rem;
+        white-space: normal;
+        line-height: 1.4;
+      }
+    }
+
+    /* Accordion: tighten on mobile */
+    @media (max-width: 600px) {
+      .accordion-btn {
+        padding: 16px 16px;
+        gap: 10px;
+      }
+      .accordion-title-text {
+        font-size: 0.95rem;
+      }
+      .accordion-body-inner {
+        padding: 16px 16px 20px;
+      }
+      .accordion-highlights {
+        gap: 6px;
+      }
+      .acc-tag {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+      }
+    }
+
+    /* Package grid: handled by CSS but pkg-card padding on mobile */
+    @media (max-width: 600px) {
+      .pkg-card-top { padding: 24px 20px 18px; }
+      .pkg-departures { padding: 18px 20px; }
+      .pkg-features-section { padding: 18px 20px 24px; }
+      .pkg-single-price { padding: 18px 20px; }
+      .pkg-title { font-size: 1.6rem; }
+      .pkg-dep-price { font-size: 1.3rem; }
+      .pkg-price-big { font-size: 2.6rem; }
+    }
+
+    /* Booking sidebar on mobile: reset all sticky behaviour */
+    @media (max-width: 960px) {
+      .booking-sidebar {
+        margin-top: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    /* Page hero text on small screens */
+    @media (max-width: 600px) {
+      .page-hero { height: 380px; }
+      .page-hero-title { font-size: 2rem; }
+      .page-hero-sub { font-size: 0.9rem; }
+    }
+
+    /* Highlights grid: 2 col on tablet, 1 col on small mobile */
+    @media (max-width: 480px) {
+      .highlights-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Gallery masonry: 2 col on mobile */
+    @media (max-width: 540px) {
+      .gallery-masonry { columns: 2; column-gap: 8px; }
+      .gallery-masonry .gm-item { margin-bottom: 8px; }
+    }
+
+    /* FAQ list padding on mobile */
+    @media (max-width: 600px) {
+      .faq-btn { font-size: 0.9rem; padding: 18px 0; }
+    }
+
+    /* CTA buttons stack on mobile */
+    @media (max-width: 480px) {
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .cta-buttons .btn { width: 100%; justify-content: center; }
+    }
+
+    /* Inline nav: slightly smaller text on mobile */
+    @media (max-width: 480px) {
+      .inline-nav-list a { padding: 14px 14px; font-size: 0.75rem; }
+    }
+
+    /* itin-days-badge: wrap gracefully */
+    @media (max-width: 480px) {
+      .itin-days-badge {
+        font-size: 0.68rem;
+        padding: 6px 12px;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+      }
     }
   </style>
   <script type="application/ld+json">
@@ -159,7 +294,7 @@
 <!-- OVERVIEW -->
 <section class="section-pad" id="overview" style="background:var(--white);">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:start;" class="overview-grid">
+    <div class="overview-grid">
       <div class="reveal">
         <span class="section-label">The Journey</span>
         <h2 class="section-title">Two Sacred Summits. One Unforgettable Yatra.</h2>
@@ -167,22 +302,18 @@
         <p style="margin-bottom:20px;">This is not two separate journeys. Adi Kailash and Om Parvat share the same route, the same sacred valley, the same soul. Both destinations are woven into a single expedition — a pilgrimage through pine forests, ancient Bhotiya villages, high-altitude meadows, and glacial silence.</p>
         <p>ItsHimalayas offers this expedition in two packages tailored to your starting point: <strong>Delhi ↔ Delhi</strong> (7 days) or <strong>Kathgodam ↔ Kathgodam</strong> (5 days). Same mountains. Same experience. Choose what suits you.</p>
 
-        <div style="display:flex;gap:32px;margin-top:40px;flex-wrap:wrap;">
-          <div style="text-align:center;">
-            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">4800m</div>
+        <div class="overview-stats-row">
+          <div class="overview-stat">
+            <div class="stat-num" style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">4800m</div>
             <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Max Altitude</div>
           </div>
-          <div style="text-align:center;">
-            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">2</div>
+          <div class="overview-stat">
+            <div class="stat-num" style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">2</div>
             <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Sacred Peaks</div>
           </div>
-          <!-- <div style="text-align:center;">
-            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">Max&nbsp;12</div>
-            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Per Batch</div>
-          </div> -->
-          <div style="text-align:center;">
-            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">May-july</div>
-            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Season Summer</div>
+          <div class="overview-stat">
+            <div class="stat-num" style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">May–July</div>
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Season</div>
           </div>
         </div>
       </div>
@@ -200,19 +331,19 @@
         <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
           <div style="font-size:0.78rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Included</div>
           <ul style="display:flex;flex-direction:column;gap:8px;">
-            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ All accommodation (guesthouses + camps)</li>
-            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ All meals (breakfast, lunch, dinner)</li>
-            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ Expert local guide &amp; support staff</li>
-            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ All inner-line permits &amp; forest fees</li>
-            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ Transport as per chosen package</li>
-            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ Medical kit &amp; oxygen cylinder</li>
+            <li style="font-size:0.84rem;color:rgba(255,255,255,0.65);display:flex;gap:8px;">✓ All accommodation (guesthouses + camps)</li>
+            <li style="font-size:0.84rem;color:rgba(255,255,255,0.65);display:flex;gap:8px;">✓ All meals (breakfast, lunch, dinner)</li>
+            <li style="font-size:0.84rem;color:rgba(255,255,255,0.65);display:flex;gap:8px;">✓ Expert local guide &amp; support staff</li>
+            <li style="font-size:0.84rem;color:rgba(255,255,255,0.65);display:flex;gap:8px;">✓ All inner-line permits &amp; forest fees</li>
+            <li style="font-size:0.84rem;color:rgba(255,255,255,0.65);display:flex;gap:8px;">✓ Transport as per chosen package</li>
+            <li style="font-size:0.84rem;color:rgba(255,255,255,0.65);display:flex;gap:8px;">✓ Medical kit &amp; oxygen cylinder</li>
           </ul>
         </div>
         <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
-          <div style="font-size:0.78rem;color:rgba(0, 0, 0, 0.4);margin-bottom:6px;">Call / WhatsApp</div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:6px;">Call / WhatsApp</div>
           <a href="tel:+919456535685" style="display:block;font-size:0.9rem;color:var(--gold);font-weight:600;text-decoration:none;margin-bottom:3px;">+91 94565 35685</a>
           <a href="tel:+919805471666" style="display:block;font-size:0.9rem;color:var(--gold);font-weight:600;text-decoration:none;margin-bottom:10px;">+91 98054 71666</a>
-          <a href="mailto:itshimalayasofficial@gmail.com" style="font-size:0.8rem;color:rgba(0, 0, 0, 0.5);text-decoration:none;">itshimalayasofficial@gmail.com</a>
+          <a href="mailto:itshimalayasofficial@gmail.com" style="font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;">itshimalayasofficial@gmail.com</a>
         </div>
       </aside>
     </div>
