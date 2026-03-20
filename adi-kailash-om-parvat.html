@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adi Kailash & Om Parvat Yatra — Sacred Himalayan expedition from ItsHimalayas. Two sub-packages: Delhi to Delhi (7 days) and Kathgodam to Kathgodam (5 days). Expert guided tour to Parvati Sarovar & Om Parvat viewpoint." />
+  <meta name="keywords" content="Adi Kailash tour, Om Parvat yatra, Parvati Sarovar, Kumaon Himalayas trek, Adi Kailash Om Parvat package, Chota Kailash, Nabhidhang Om Parvat" />
+  <meta property="og:title" content="Adi Kailash & Om Parvat Yatra | ItsHimalayas" />
+  <meta property="og:description" content="Sacred expedition to Adi Kailash & Om Parvat. Delhi–Delhi 7 Days · Kathgodam–Kathgodam 5 Days. Starting ₹25,000/person." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80" />
+  <meta property="og:type" content="product" />
+  <title>Adi Kailash & Om Parvat Yatra | ItsHimalayas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ---- Itinerary Tab Toggle ---- */
+    .itin-tabs {
+      display: flex;
+      gap: 0;
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 5px;
+      width: fit-content;
+      margin: 0 auto 48px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    }
+    .itin-tab-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      transition: background 0.25s, color 0.25s;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .itin-tab-btn.active {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .itin-tab-btn:hover:not(.active) {
+      color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.07);
+    }
+    .itin-panel { display: none; }
+    .itin-panel.active { display: block; }
+
+    .itin-days-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 580px) {
+      .itin-tabs { width: 100%; flex-direction: column; }
+      .itin-tab-btn { text-align: center; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Adi Kailash & Om Parvat Yatra",
+    "description": "Sacred expedition to Adi Kailash and Om Parvat in the Kumaon Himalayas.",
+    "provider": { "@type": "Organization", "name": "ItsHimalayas" },
+    "touristType": "Pilgrims, Trekkers",
+    "offers": [
+      { "@type": "Offer", "name": "Delhi to Delhi", "price": "29000", "priceCurrency": "INR" },
+      { "@type": "Offer", "name": "Kathgodam to Kathgodam", "price": "25000", "priceCurrency": "INR" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <svg class="loader-mountain" width="72" height="48" viewBox="0 0 72 48" fill="none">
+    <path d="M2 46 L20 12 L28 22 L36 8 L44 20 L52 14 L70 46Z" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+    <path d="M36 8 L44 20 L52 14 L60 30" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M32 16 L36 8 L40 14" fill="white" opacity="0.9"/>
+  </svg>
+  <div class="loader-logo">Its<span>Himalayas</span></div>
+  <div class="loader-sub">Adi Kailash · Om Parvat</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- PAGE TRANSITION OVERLAY -->
+<div id="page-transition"></div>
+<div class="nav-overlay"></div>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-main">Its<span>Himalayas</span></span>
+        <span class="nav-logo-sub">Adi Kailash · Om Parvat</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adi-kailash-om-parvat.html" class="active">Adi Kailash &amp; Om Parvat</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg-img" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=85&fm=webp');"></div>
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Adi Kailash &amp; Om Parvat</span>
+      </div>
+      <h1 class="page-hero-title">Adi Kailash &amp; Om Parvat Yatra</h1>
+      <p class="page-hero-sub">Sacred Himalayan Expedition · Two Departure Options · Max 12 Participants</p>
+    </div>
+  </div>
+</section>
+
+<!-- INLINE NAV -->
+<div class="inline-nav">
+  <div class="container">
+    <ul class="inline-nav-list">
+      <li><a href="#overview" class="active">Overview</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#itinerary">Itinerary</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#gallery-tour">Gallery</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="section-pad" id="overview" style="background:var(--white);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:start;" class="overview-grid">
+      <div class="reveal">
+        <span class="section-label">The Journey</span>
+        <h2 class="section-title">Two Sacred Summits. One Unforgettable Yatra.</h2>
+        <p style="margin-bottom:20px;">Adi Kailash — also revered as Chota Kailash — is a sacred peak in Pithoragarh, Uttarakhand, strikingly similar in form to the great Mount Kailash of Tibet. It carries immense spiritual weight for pilgrims who seek the divine without the arduous cross-border journey. Rising alongside it in spiritual significance is Om Parvat — a snow-clad peak whose natural snowfield forms the sacred Om symbol (ॐ), visible with the naked eye from the Nabhidhang viewpoint.</p>
+        <p style="margin-bottom:20px;">This is not two separate journeys. Adi Kailash and Om Parvat share the same route, the same sacred valley, the same soul. Both destinations are woven into a single expedition — a pilgrimage through pine forests, ancient Bhotiya villages, high-altitude meadows, and glacial silence.</p>
+        <p>ItsHimalayas offers this expedition in two packages tailored to your starting point: <strong>Delhi ↔ Delhi</strong> (7 days) or <strong>Kathgodam ↔ Kathgodam</strong> (5 days). Same mountains. Same experience. Choose what suits you.</p>
+
+        <div style="display:flex;gap:32px;margin-top:40px;flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">4800m</div>
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Max Altitude</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">2</div>
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Sacred Peaks</div>
+          </div>
+          <!-- <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">Max&nbsp;12</div>
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Per Batch</div>
+          </div> -->
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--navy);">May-july</div>
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;">Season Summer</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking sidebar -->
+      <aside class="booking-sidebar reveal">
+        <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px;">Starting from</div>
+        <div style="font-family:var(--font-display);font-size:3rem;font-weight:700;color:var(--white);line-height:1;margin-bottom:4px;">₹25,000</div>
+        <div style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:28px;">per person · all inclusive</div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:12px;">Book This Tour</a>
+        <a href="https://wa.me/919456535685?text=Hi!%20I'm%20interested%20in%20the%20Adi%20Kailash%20%26%20Om%20Parvat%20Yatra.%20Please%20share%20details." class="btn btn-whatsapp" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp Enquiry
+        </a>
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:0.78rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">Included</div>
+          <ul style="display:flex;flex-direction:column;gap:8px;">
+            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ All accommodation (guesthouses + camps)</li>
+            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ All meals (breakfast, lunch, dinner)</li>
+            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ Expert local guide &amp; support staff</li>
+            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ All inner-line permits &amp; forest fees</li>
+            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ Transport as per chosen package</li>
+            <li style="font-size:0.84rem;color:rgba(0, 0, 0, 0.65);display:flex;gap:8px;">✓ Medical kit &amp; oxygen cylinder</li>
+          </ul>
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:0.78rem;color:rgba(0, 0, 0, 0.4);margin-bottom:6px;">Call / WhatsApp</div>
+          <a href="tel:+919456535685" style="display:block;font-size:0.9rem;color:var(--gold);font-weight:600;text-decoration:none;margin-bottom:3px;">+91 94565 35685</a>
+          <a href="tel:+919805471666" style="display:block;font-size:0.9rem;color:var(--gold);font-weight:600;text-decoration:none;margin-bottom:10px;">+91 98054 71666</a>
+          <a href="mailto:itshimalayasofficial@gmail.com" style="font-size:0.8rem;color:rgba(0, 0, 0, 0.5);text-decoration:none;">itshimalayasofficial@gmail.com</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="section-pad" id="highlights" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Why This Journey</span>
+      <h2 class="section-title">Tour Highlights</h2>
+    </div>
+    <div class="highlights-grid">
+      <div class="highlight-card reveal reveal-delay-1"><div class="highlight-icon">🕉️</div><div><h4>Om Parvat — The Living Symbol</h4><p>Snow naturally forms the sacred Om (ॐ) on this peak — visible with the naked eye from Nabhidhang</p></div></div>
+      <div class="highlight-card reveal reveal-delay-2"><div class="highlight-icon">⛰️</div><div><h4>Adi Kailash &amp; Parvati Sarovar</h4><p>The sacred glacial lake at 4800m mirrors the divine Adi Kailash peak in absolute silence</p></div></div>
+      <div class="highlight-card reveal reveal-delay-3"><div class="highlight-icon">🌸</div><div><h4>Dhauliganga &amp; Kali Valley</h4><p>Journey through one of Kumaon's most dramatic river valleys carved over millennia</p></div></div>
+      <div class="highlight-card reveal"><div class="highlight-icon">🛕</div><div><h4>Ancient Shiva Temple</h4><p>Visit the 1000-year-old Shiva temple at the base of Adi Kailash, a living pilgrimage site</p></div></div>
+      <div class="highlight-card reveal reveal-delay-1"><div class="highlight-icon">🏘️</div><div><h4>Bhotiya Villages</h4><p>Pass through remote Gunji and Nabi — among the last inhabited high-altitude Bhotiya settlements</p></div></div>
+      <div class="highlight-card reveal reveal-delay-2"><div class="highlight-icon">🦅</div><div><h4>Himalayan Wildlife</h4><p>Spot Himalayan Monal, snow leopard tracks, Himalayan blue sheep &amp; rare alpine flora</p></div></div>
+      <div class="highlight-card reveal reveal-delay-3"><div class="highlight-icon">📸</div><div><h4>Cinematic Landscapes</h4><p>Sunrise on snow peaks, pristine gorges, prayer flags — every turn is a frame worth keeping</p></div></div>
+      <div class="highlight-card reveal"><div class="highlight-icon">🌙</div><div><h4>Stargazing at High Camp</h4><p>Zero light pollution at altitude — the Milky Way in its full, staggering glory above you</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY with tabs -->
+<section class="section-pad" id="itinerary" style="background:var(--white);">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:40px;">
+      <span class="section-label">Day by Day</span>
+      <h2 class="section-title">Full Itinerary</h2>
+      <p class="section-subtitle">Select your departure package below to see the detailed day-by-day plan.</p>
+    </div>
+
+    <!-- Tab buttons -->
+    <div class="reveal" style="display:flex;justify-content:center;">
+      <div class="itin-tabs">
+        <button class="itin-tab-btn active" data-tab="delhi">
+          🚂 &nbsp;Delhi ↔ Delhi &nbsp;·&nbsp; 7 Days
+        </button>
+        <button class="itin-tab-btn" data-tab="kathgodam">
+          🚉 &nbsp;Kathgodam ↔ Kathgodam &nbsp;·&nbsp; 5 Days
+        </button>
+      </div>
+    </div>
+
+    <!-- PANEL 1: Delhi to Delhi (7 days) -->
+    <div class="itin-panel active" id="panel-delhi">
+      <div class="itin-days-badge" style="margin:0 auto 28px;display:table;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        7 Days · Delhi ↔ Delhi · ₹29,000/person
+      </div>
+
+      <div class="accordion reveal">
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 1</span><span class="accordion-title-text">Delhi → Haldwani / Kathgodam (By Train / Road)</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Depart Delhi by overnight train or road to Kathgodam / Haldwani — the gateway to the Kumaon Himalayas. The train journey is scenic and comfortable; recommended trains include the Ranikhet Express or Kathgodam Express. Arrive late evening, check-in at guesthouse.</p>
+            <p><strong>Stay:</strong> Guesthouse in Haldwani / Kathgodam | <strong>Meals:</strong> Dinner</p>
+            <div class="accordion-highlights"><span class="acc-tag">Overnight Train</span><span class="acc-tag">Gateway to Kumaon</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 2</span><span class="accordion-title-text">Haldwani → Dharchula (En Route: Almora, Pithoragarh)</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Early morning departure for the long but spectacular drive to Dharchula (~11–12 hours, 420km). The route passes through Almora — a charming hill town famous for the Nanda Devi temple and Chitai Golu Devta temple — where we stop for breakfast and a short walk through the bazaar. Continue to Pithoragarh, the "Mini Kashmir" of Uttarakhand, where the Pithoragarh Fort offers sweeping valley views. From here the road snakes along the Kali river gorge all the way to Dharchula, the last major town before the restricted zone. The drive from Pithoragarh onwards is dramatic — sheer cliffs, turquoise river, Nepal visible on the opposite bank.</p>
+            <p><strong>En Route Visits:</strong> Nanda Devi Temple (Almora) · Chitai Golu Devta Temple · Pithoragarh Fort Viewpoint · Kali River Gorge</p>
+            <p><strong>Stay:</strong> Guesthouse in Dharchula | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Almora Bazaar</span><span class="acc-tag">Pithoragarh Fort</span><span class="acc-tag">Kali Gorge Drive</span><span class="acc-tag">India-Nepal Border Town</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 3</span><span class="accordion-title-text">Dharchula → Gunji (Inner Line Zone · Via Sobla, Sirkha)</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>After inner line permit verification at the Dharchula checkpoint, we drive into the restricted zone toward Gunji (~90km, 4–5 hours). The landscape transforms dramatically — the road narrows to a single lane clinging to cliff faces above the roaring Kali river. Stop at Sobla village, famous for its Kali temple and brilliant views of the Nepal Himalaya across the gorge. Continue through remote Sirkha — a Bhotiya village with traditional flat-roofed stone houses. Arrive Gunji, your first real high-altitude stop at 3320m. Meet the warm Bhotiya community; evening briefing on the upcoming trek.</p>
+            <p><strong>En Route Visits:</strong> Dharchula ITBP Check Post · Sobla Kali Temple · Sirkha Bhotiya Village · Kali River Valley</p>
+            <p><strong>Stay:</strong> Guesthouse in Gunji (3320m) | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Altitude: 3320m</span><span class="acc-tag">Restricted Zone Entry</span><span class="acc-tag">Bhotiya Culture</span><span class="acc-tag">Trek Briefing</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 4</span><span class="accordion-title-text">Gunji / Nabi → Adi Kailash (Jolingkong) → Gunji / Nabi</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The crown jewel of the journey. Wake at 4:30 AM for an early start — the morning light on snow peaks is otherworldly. Drive/trek from Gunji to Nabi village, then begin the ascent toward Jolingkong and the sacred Parvati Sarovar (Om Lake) at 4800m. The trail climbs through moraine fields, glacial streams, and breathtaking alpine meadows. At Jolingkong, the ancient Adi Parvati temple stands beside the still, mirror-like Om Lake — with the full, majestic face of Adi Kailash reflected in the water. This is the moment. Puja at the temple, time for meditation and photography. Return to Gunji/Nabi by evening.</p>
+            <p><strong>Key Experience:</strong> Parvati Sarovar (Om Lake) · Adi Kailash peak views · Adi Parvati Temple puja · Glacial moraine walk</p>
+            <p><strong>Stay:</strong> Guesthouse in Gunji / Nabi (3320m) | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Altitude: 4800m</span><span class="acc-tag">Parvati Sarovar</span><span class="acc-tag">Adi Kailash Peak</span><span class="acc-tag">Sacred Puja</span><span class="acc-tag">Sunrise Photography</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 5</span><span class="accordion-title-text">Gunji → Om Parvat Viewpoint (Nabhidhang) → Dharchula</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Before leaving the mountains, we make the pilgrimage to Nabhidhang — the sacred high-altitude viewpoint from which Om Parvat reveals itself fully. The snowfield on the peak naturally forms the symbol of Om (ॐ), visible with the naked eye, often described by visitors as a life-changing sight. Morning drive/short trek to Nabhidhang, time for darshan and photography, then descent to Dharchula by road. Team dinner in Dharchula to celebrate the completion of the sacred circuit.</p>
+            <p><strong>Key Experience:</strong> Om Parvat natural Om symbol · Nabhidhang viewpoint · Clear sky darshan</p>
+            <p><strong>Stay:</strong> Guesthouse in Dharchula | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Om Parvat Darshan</span><span class="acc-tag">Nabhidhang Viewpoint</span><span class="acc-tag">Celebration Dinner</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 6</span><span class="accordion-title-text">Dharchula → Haldwani / Kathgodam</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Early departure from Dharchula. Drive back along the Kali river valley — the same road, but somehow different now. Stop at Askot Wildlife Sanctuary where Himalayan musk deer, langurs and a wide variety of high-altitude birds are frequently spotted. Arrive Haldwani / Kathgodam by evening. Overnight at guesthouse.</p>
+            <p><strong>En Route:</strong> Askot Wildlife Sanctuary · Kali River Valley views</p>
+            <p><strong>Stay:</strong> Guesthouse in Haldwani | <strong>Meals:</strong> Breakfast, Dinner</p>
+            <div class="accordion-highlights"><span class="acc-tag">Askot Wildlife</span><span class="acc-tag">Himalayan Birds</span><span class="acc-tag">Return Journey</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 7</span><span class="accordion-title-text">Haldwani / Kathgodam → Delhi (Departure)</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Morning drop to Kathgodam railway station or Haldwani bus stand. Board your train/bus to Delhi. Tour concludes with completion certificates for all participants. We look forward to welcoming you back to the mountains.</p>
+            <p><strong>Meals:</strong> Breakfast</p>
+            <div class="accordion-highlights"><span class="acc-tag">Kathgodam Station Drop</span><span class="acc-tag">Completion Certificates</span></div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: Kathgodam to Kathgodam (5 days) -->
+    <div class="itin-panel" id="panel-kathgodam">
+      <div class="itin-days-badge" style="margin:0 auto 28px;display:table;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        5 Days · Kathgodam ↔ Kathgodam · ₹25,000/person
+      </div>
+
+      <div class="accordion reveal">
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 1</span><span class="accordion-title-text">Kathgodam → Dharchula (En Route: Almora, Pithoragarh)</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Early pickup from Kathgodam railway station or Haldwani bus stand. Begin the long, scenic drive to Dharchula (~11–12 hours, 420km). The route passes through Almora — a charming Kumaoni hill town — where we stop for breakfast at the famous Nanda Devi temple and walk through the copper bazaar. Continue to Pithoragarh, the "Mini Kashmir" of Uttarakhand — the Pithoragarh Fort viewpoint gives sweeping valley views of the Soar valley. From Pithoragarh, the road descends dramatically along the Kali river gorge, with Nepal visible on the opposite bank all the way to Dharchula.</p>
+            <p><strong>En Route Visits:</strong> Nanda Devi Temple (Almora) · Chitai Golu Devta Temple · Pithoragarh Fort Viewpoint · Kali River Gorge Drive</p>
+            <p><strong>Stay:</strong> Guesthouse in Dharchula | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Almora Bazaar</span><span class="acc-tag">Pithoragarh Fort</span><span class="acc-tag">Kali Gorge Drive</span><span class="acc-tag">India-Nepal Border</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 2</span><span class="accordion-title-text">Dharchula → Gunji (Inner Line Zone · Via Sobla, Sirkha)</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>After inner line permit verification at the Dharchula ITBP checkpoint, we enter the restricted zone and drive toward Gunji (~90km, 4–5 hours). The landscape turns dramatic — a single-lane road on cliff faces above the Kali river. Stop at Sobla's Kali temple, notable for its position on the confluence of mountain streams. Pass through remote Sirkha, a classic Bhotiya village with traditional flat-roofed stone houses and prayer flags. Arrive Gunji by afternoon — your first high-altitude village at 3320m. Evening walk and trek briefing.</p>
+            <p><strong>En Route Visits:</strong> Dharchula Check Post · Sobla Kali Temple · Sirkha Bhotiya Village</p>
+            <p><strong>Stay:</strong> Guesthouse in Gunji (3320m) | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Altitude: 3320m</span><span class="acc-tag">Restricted Zone Entry</span><span class="acc-tag">Bhotiya Culture</span><span class="acc-tag">Trek Briefing</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 3</span><span class="accordion-title-text">Gunji / Nabi → Adi Kailash (Jolingkong) → Gunji / Nabi</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The sacred heart of the expedition. 4:30 AM wake-up for an early start. Drive or trek from Gunji to Nabi village, then ascend toward Jolingkong and the Parvati Sarovar (Om Lake) at 4800m. The route passes through high moraine fields, glacial streams, and an eerie, beautiful silence broken only by prayer flags and wind. At Jolingkong, the ancient Adi Parvati temple stands at the edge of the still, mirror-like Om Lake — Adi Kailash peak reflected in its waters. This moment is why people come. Puja at the temple, open time for meditation, darshan, and photography. Return to Gunji / Nabi by evening.</p>
+            <p><strong>Key Experience:</strong> Parvati Sarovar (Om Lake) · Adi Kailash peak views · Adi Parvati Temple puja · Moraine walk at 4800m</p>
+            <p><strong>Stay:</strong> Guesthouse in Gunji / Nabi | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Altitude: 4800m</span><span class="acc-tag">Parvati Sarovar</span><span class="acc-tag">Adi Kailash Peak</span><span class="acc-tag">Sacred Puja</span><span class="acc-tag">Sunrise Photography</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 4</span><span class="accordion-title-text">Gunji → Om Parvat Viewpoint (Nabhidhang) → Dharchula</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The second pilgrimage of the journey — Om Parvat. Drive/trek to Nabhidhang, the elevated viewpoint from which Om Parvat reveals its sacred snowfield in the shape of Om (ॐ). Clear mornings are the best time; the symbol is visible to the naked eye and has moved every visitor who has stood here. After darshan and photography, we begin the descent back toward Dharchula. Team celebration dinner in Dharchula to mark the completion of both sacred peaks.</p>
+            <p><strong>Key Experience:</strong> Om Parvat natural Om symbol · Nabhidhang altitude viewpoint · Final darshan &amp; celebration</p>
+            <p><strong>Stay:</strong> Guesthouse in Dharchula | <strong>Meals:</strong> All meals</p>
+            <div class="accordion-highlights"><span class="acc-tag">Om Parvat Darshan</span><span class="acc-tag">Nabhidhang Viewpoint</span><span class="acc-tag">Celebration Dinner</span></div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn"><span class="accordion-day">Day 5</span><span class="accordion-title-text">Dharchula → Kathgodam (Departure)</span><span class="accordion-icon">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Early departure from Dharchula. Drive back along the Kali river valley. Stop at Askot Wildlife Sanctuary — ideal for spotting Himalayan musk deer, langurs, and high-altitude birds. Arrive Kathgodam railway station or Haldwani bus stand by evening. Tour concludes with completion certificates for all participants.</p>
+            <p><strong>En Route:</strong> Askot Wildlife Sanctuary · Kali River valley</p>
+            <p><strong>Meals:</strong> Breakfast</p>
+            <div class="accordion-highlights"><span class="acc-tag">Askot Wildlife</span><span class="acc-tag">Kathgodam Drop</span><span class="acc-tag">Completion Certificates</span></div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section-pad" id="packages" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:48px;">
+      <span class="section-label">Book Your Journey</span>
+      <h2 class="section-title">Tour Packages</h2>
+      <p class="section-subtitle" style="margin:0 auto;">All-inclusive pricing — accommodation, meals, permits, guide &amp; transport.</p>
+    </div>
+
+    <div class="packages-new-grid reveal">
+
+      <!-- CARD 1 — Adi Kailash & Om Parvat -->
+      <div class="pkg-card pkg-card-hero">
+        <div class="pkg-card-top">
+          <span class="pkg-ribbon">Sacred Expedition</span>
+          <div class="pkg-label">Signature Journey</div>
+          <h3 class="pkg-title">Adi Kailash<br>&amp; Om Parvat</h3>
+          <div class="pkg-meta-row">
+            <span class="pkg-meta-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              5–7 Days
+            </span>
+            <span class="pkg-meta-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Max 12 pax
+            </span>
+            <span class="pkg-meta-tag">4800m Max Alt.</span>
+          </div>
+        </div>
+
+        <div class="pkg-departures">
+          <div class="pkg-dep-label">Choose Departure Point</div>
+          <div class="pkg-dep-option">
+            <div class="pkg-dep-route">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Delhi ↔ Delhi &nbsp;<small style="opacity:0.5;font-size:0.72rem;">(7 days)</small>
+            </div>
+            <div class="pkg-dep-price">₹29,000 <sub>/person</sub></div>
+          </div>
+          <div class="pkg-dep-divider"><span>or</span></div>
+          <div class="pkg-dep-option">
+            <div class="pkg-dep-route">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Kathgodam ↔ Kathgodam &nbsp;<small style="opacity:0.5;font-size:0.72rem;">(5 days)</small>
+            </div>
+            <div class="pkg-dep-price">₹25,000 <sub>/person</sub></div>
+          </div>
+        </div>
+
+        <div class="pkg-features-section">
+          <ul class="pkg-feat-list">
+            <li class="pkg-feat-item">Adi Kailash peak &amp; Parvati Sarovar (Om Lake) at 4800m</li>
+            <li class="pkg-feat-item">Om Parvat sacred Om symbol darshan at Nabhidhang</li>
+            <li class="pkg-feat-item">All accommodation, meals &amp; inner-line permits included</li>
+            <li class="pkg-feat-item">Expert Kumaon-native guide &amp; support staff</li>
+            <li class="pkg-feat-item">Satellite phone &amp; oxygen cylinder on trek</li>
+            <li class="pkg-feat-item">Small groups — max 12 participants per batch</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book This Tour</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 — Darma Valley -->
+      <div class="pkg-card">
+        <div class="pkg-card-top">
+          <div class="pkg-label">Valley Expedition</div>
+          <h3 class="pkg-title" style="color:var(--navy);">Darma Valley</h3>
+          <div class="pkg-meta-row">
+            <span class="pkg-meta-tag">7 Days</span>
+            <span class="pkg-meta-tag">Max 10 pax</span>
+          </div>
+        </div>
+        <div class="pkg-single-price">
+          <div class="pkg-price-big" style="color:var(--navy);"><span>₹</span>14,000</div>
+          <div class="pkg-price-note">per person · all inclusive</div>
+        </div>
+        <div class="pkg-features-section">
+          <ul class="pkg-feat-list" style="--feat-color:#4b5563;">
+            <li class="pkg-feat-item">Pristine alpine meadows &amp; glacial rivers</li>
+            <li class="pkg-feat-item">Remote Bhotiya villages &amp; ancient culture</li>
+            <li class="pkg-feat-item">Panoramic Panchchuli peak views</li>
+            <li class="pkg-feat-item">All accommodation &amp; meals included</li>
+            <li class="pkg-feat-item">Expert guide &amp; full support team</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Enquire Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section-pad" id="gallery-tour" style="background:var(--white);">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Visual Diary</span>
+      <h2 class="section-title">The Yatra in Pictures</h2>
+    </div>
+    <div class="gallery-masonry reveal">
+      <div class="gm-item" data-lightbox="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80&fm=webp" alt="Adi Kailash peak at sunrise" loading="lazy" />
+        <div class="gm-overlay">⊕</div>
+      </div>
+      <div class="gm-item" data-lightbox="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&fm=webp" alt="Himalayan panorama" loading="lazy" />
+        <div class="gm-overlay">⊕</div>
+      </div>
+      <div class="gm-item" data-lightbox="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&fm=webp" alt="Kumaon valley trekking trail" loading="lazy" />
+        <div class="gm-overlay">⊕</div>
+      </div>
+      <div class="gm-item" data-lightbox="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80&fm=webp" alt="Sacred alpine lake reflection" loading="lazy" />
+        <div class="gm-overlay">⊕</div>
+      </div>
+      <div class="gm-item" data-lightbox="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80&fm=webp" alt="Snow peaks and trekking camp" loading="lazy" />
+        <div class="gm-overlay">⊕</div>
+      </div>
+      <div class="gm-item" data-lightbox="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fm=webp" alt="Mountain trail through forest" loading="lazy" />
+        <div class="gm-overlay">⊕</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" id="faq" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Questions &amp; Answers</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-btn">What is the best time for the Adi Kailash &amp; Om Parvat Yatra? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">May–June and September–October are the ideal windows. July–August sees heavy monsoon making mountain roads hazardous. The winter months (November–April) bring heavy snowfall, closing the route entirely. June gives clearest Om Parvat views; May has fresh snow for dramatic Adi Kailash photos.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">Is Adi Kailash and Om Parvat the same trip or two different ones? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">They are one single expedition. Adi Kailash (via Jolingkong / Parvati Sarovar) and Om Parvat (via Nabhidhang viewpoint) share the same route, same base, and same restricted zone. ItsHimalayas covers both destinations in a single yatra — you see the reflection of Adi Kailash in the sacred Om Lake AND stand before Om Parvat's natural Om symbol, all in one journey.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">What is the difference between the Delhi and Kathgodam packages? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">The Delhi–Delhi package (7 days, ₹29,000/person) includes your return travel between Delhi and Kathgodam, either by road or with train support. The Kathgodam–Kathgodam package (5 days, ₹25,000/person) begins and ends at Kathgodam railway station, making it ideal for those coming from Uttarakhand, UP, or nearby states. The mountain experience is identical — the difference is only the starting point and travel days included.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">Do I need prior trekking experience? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">The trek to Parvati Sarovar is moderate. Good basic fitness is essential — you should be comfortable walking 8–12km per day on uneven mountain terrain. Prior trekking experience is beneficial but not mandatory. We recommend regular walks of 5–7km daily for 3–4 weeks before your departure.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">What permits are needed and does ItsHimalayas arrange them? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes — we handle everything. The Dharchula–Gunji route is a restricted zone requiring an Inner Line Permit (ILP). We also arrange all forest fees and high-altitude entry permits. All permit costs are included in the package price. You need to share your Aadhaar card / Passport details with us at least 15 days before departure.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">What is the cancellation &amp; refund policy? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Cancellation 30+ days before departure: 90% refund. 15–29 days: 50% refund. Less than 15 days: no refund. Cancellation due to natural disaster or route closure: full amount held as credit for rescheduling. We strongly recommend travel insurance for all participants.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <span class="section-label white">Limited Spots</span>
+    <h2>Begin Your Sacred Yatra</h2>
+    <p>Only 12 participants per batch. Next departures: May 2025, June 2025, September 2025.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn btn-primary">Reserve My Spot</a>
+      <a href="https://wa.me/919456535685?text=Hi!%20I%20want%20to%20book%20the%20Adi%20Kailash%20%26%20Om%20Parvat%20Yatra.%20Please%20confirm%20upcoming%20dates." class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Check Availability
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo" style="background:var(--navy);color:rgba(255,255,255,0.7);padding:40px 0;border-top:1px solid rgba(255,255,255,0.06);">
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding:0;">
+      <p>© 2025 ItsHimalayas. All rights reserved.</p>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;">
+        <a href="index.html" style="font-size:0.82rem;color:rgba(255,255,255,0.5);transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
+        <a href="gallery.html" style="font-size:0.82rem;color:rgba(255,255,255,0.5);" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Gallery</a>
+        <a href="contact.html" style="font-size:0.82rem;color:var(--gold);">Book Now</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Previous">‹</button>
+  <img class="lightbox-img" src="" alt="Gallery image" />
+  <button class="lightbox-nav lightbox-next" aria-label="Next">›</button>
+</div>
+
+<a href="https://wa.me/919456535685?text=Hi!%20I'm%20interested%20in%20the%20Adi%20Kailash%20%26%20Om%20Parvat%20Yatra." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span class="wa-float-text">Chat on WhatsApp</span>
+</a>
+
+<script src="js/script.js" defer></script>
+<script>
+  // Itinerary tab switcher
+  document.querySelectorAll('.itin-tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.itin-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.itin-panel').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+      document.getElementById('panel-' + this.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
