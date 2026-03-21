@@ -208,7 +208,7 @@ p{font-weight:300;color:var(--text-mid);line-height:1.75}
    TRAVEL WING
    ========================================= */
 .section-travel{background:var(--navy);padding:104px 0;position:relative;overflow:hidden}
-.section-travel::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=50') center/cover;opacity:0.07}
+.section-travel::before{content:'';position:absolute;inset:0;background:url('https://res.cloudinary.com/dqr00bepi/image/upload/v1774120088/WhatsApp_Image_2026-03-22_at_00.33.15_hweomq.jpg') center/cover;opacity:0.07}
 .travel-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}
 .travel-text h2{color:var(--white)}
 .travel-text h2 em{color:var(--gold-light)}
@@ -223,12 +223,14 @@ p{font-weight:300;color:var(--text-mid);line-height:1.75}
 .travel-pkg-price{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--gold-light);white-space:nowrap;flex-shrink:0}
 .travel-pkg-price sub{font-size:0.62rem;font-family:var(--font-body);font-weight:400;color:rgba(255,255,255,0.3)}
 
+
 /* =========================================
    JOIN CTA
    ========================================= */
 .section-join{background:var(--navy-mid);padding:96px 0}
 .join-inner{max-width:600px;margin:0 auto}
 .join-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.white{color:gold;}
 
 /* =========================================
    FLOATING WHATSAPP
