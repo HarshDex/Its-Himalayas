@@ -66,6 +66,8 @@ p{font-weight:300;color:var(--text-mid);line-height:1.75}
 .btn-wa-sm{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.3);border-radius:4px;color:#25d366;font-size:0.8rem;font-weight:600;font-family:var(--font-body);transition:var(--transition);white-space:nowrap}
 .btn-wa-sm:hover{background:#25d366;color:#fff;border-color:#25d366}
 
+.top-pad{padding-top: 10%;}
+
 /* =========================================
    NAVBAR — FIXED
    ========================================= */
